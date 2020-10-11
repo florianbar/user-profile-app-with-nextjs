@@ -1,10 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-//import { Redirect } from 'react-router-dom';
-//import styled from 'styled-components';
 
 import { ProfileContext } from '../../context/profile-context';
-import Button from '../../components/UI/Button'
+import Button from '../../components/UI/Button';
 
 export default function Profile() {
     const router = useRouter();
