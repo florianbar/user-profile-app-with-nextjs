@@ -1,13 +1,8 @@
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
-//import { withRouter } from 'react-router-dom';
-//import styled from 'styled-components';
 
 import { ProfileContext } from '../context/profile-context';
 import Card from './UI/Card';
-
-// const StyledUl = styled.ul`list-style-type: none;`;
-// const StyledLi = styled.li`display: inline-block; padding: 10px;`;
 
 const ProfileList = props => {
     const { filteredProfiles } = useContext(ProfileContext);
@@ -34,9 +29,15 @@ const ProfileList = props => {
     }
 
     return (
-        <ul>
-            {listContent}
-        </ul>
+        <React.Fragment>
+            <ul>
+                {listContent}
+            </ul>
+            <style>{`
+                ul { list-style-type: none; }
+                li { display: inline-block; padding: 10px; }
+            `}</style>
+        </React.Fragment>
     );
 }
 
